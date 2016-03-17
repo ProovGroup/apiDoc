@@ -1,9 +1,9 @@
 ## Généralité
-L'access token est valide Durans 24h passez se delais il faudras faudras reinteroger la route [POST v1/oauth]()
+L'*access token* n'est valide que 24h. Passé ce délai il faudra réinterroger la route [POST v1/oauth]().
 
 
 ## POST v1/oauth
-Route qui permet de recuperer le token qui va vous permetre d'intragire avec l'api 
+[POST v1/oauth]() et l'objet suivant, permet de récupérer le token permettant d'intéragir avec l'api  :
 
 ```
 {
@@ -12,9 +12,9 @@ Route qui permet de recuperer le token qui va vous permetre d'intragire avec l'a
 }
 ```
 
-### Reponce 
+### Réponse 
 
-Lors d'un Success
+Lors d'un *Success* :
 
 ```
 POST v1/oauth 200
@@ -24,7 +24,7 @@ body:
 }
 ```
 
-Si le token ou le secret son erroné
+Si le **token** ou le **secret** est erroné :
 
 ```
 POST v1/oauth 401
@@ -42,7 +42,7 @@ body:
 }
 ```
 
-Si le token n'ai pas dans le body
+Si le **token** n'est pas dans le **body** :
 
 ```
 POST v1/oauth 400
@@ -59,7 +59,7 @@ POST v1/oauth 400
 }
 ```
 
-Si le secret n'ai pas dans le body
+Si le **secret** n'est pas dans le **body** :
 
 ```
 POST v1/oauth 400

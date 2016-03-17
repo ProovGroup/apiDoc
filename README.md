@@ -1,3 +1,4 @@
+[Authentification](./docs/auth.md)  
 [Les structure retourner](./docs/structure.md)  
 [Initialiser un weproov](./docs/init.md)  
 [Recuperer un weproov](./docs/get.md)  

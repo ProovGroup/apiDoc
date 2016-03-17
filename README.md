@@ -1,1 +1,5 @@
-[Initialiser un weproov](./docs/get.md)
+[les structure retourner](./docs/structure.md)
+[Initialiser un weproov](./docs/init.md)
+[recuperer un weproov](./docs/get.md)
+[mise a jour d'un weproov](./docs/update.md)
+[les webhook](./docs/webhooks.md)

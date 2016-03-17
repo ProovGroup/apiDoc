@@ -1,5 +1,8 @@
 ## Généralité
-L'*access token* n'est valide que 24h. Passé ce délai il faudra réinterroger la route [POST v1/oauth]().
+L'**access_token** n'est valide que 24h. Passé ce délai il faudra réinterroger la route [POST v1/oauth]().
+
+L'**access_token** doit être placé dans le header dans le champ Authorization 
+exemple: 'Authorization Bearer <auth_token>' 
 
 
 ## POST v1/oauth

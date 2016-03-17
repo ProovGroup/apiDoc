@@ -1,14 +1,14 @@
 ## Structure
 
-[Position](#type-position)
-[Info](#type-info)
-[Checklist](#type-checklist)
-[Support](#type-support)
-[Part](#type-part)
-[Process](#type-process)
-[Item](#type-item)
-[Géoloc](#type-géoloc)
-[WeProov](#type-weproov)
+[Position](#type-position)  
+[Info](#type-info)  
+[Checklist](#type-checklist)  
+[Support](#type-support)  
+[Part](#type-part)  
+[Process](#type-process)  
+[Item](#type-item)  
+[Géoloc](#type-géoloc)  
+[WeProov](#type-weproov)  
 
 ### généralités
 

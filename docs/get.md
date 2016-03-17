@@ -1,10 +1,10 @@
 ## Get
 
 ### Route
-[GET /v1/weproov]()  
-[/v1/weproov/pending]()  
-[/v1/weproov/dropoff]()  
-[/v1/weproov/history]()  
+[GET /v1/weproov](#get-v1weproov)  
+[GET /v1/weproov/pending]()  // en cours de redaction  
+[GET /v1/weproov/dropoff]()  // en cours de redaction  
+[GET /v1/weproov/history]()  // en cours de redaction  
 
 ### Généralités
 

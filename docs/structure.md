@@ -1,5 +1,15 @@
 ## Structure
 
+[Position](#type-position)
+[Info](#type-info)
+[Checklist](#type-checklist)
+[Support](#type-support)
+[Part](#type-part)
+[Process](#type-process)
+[Item](#type-item)
+[Géoloc](#type-géoloc)
+[WeProov](#type-weproov)
+
 ### généralités
 
 Toute les clés sont écrites en *snake case* les mots sont separés par un _ 

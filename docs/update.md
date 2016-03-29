@@ -9,7 +9,7 @@ Pour cette route, les champs pouvant être mis à jour sont toutes les infos, sa
 
 ### Structure pour le push des informations
 
-la structure est composée de deux élèments :  la **position**, qui permet de seléctionner un champ à *update* et la **valeur** à *set*.
+la structure est composée de deux élèments : la **position**, qui permet de sélectionner un champ à *update* et la **valeur** à *set*.
 
 ```
 {
@@ -18,15 +18,15 @@ la structure est composée de deux élèments :  la **position**, qui permet de 
 }
 ```
 
-### Pour trouvez la position il existe deux solutions
+### Pour trouver la position, il existe deux solutions
 
 #### Via l'API
 
 Lors de la récupération d'un WeProov via la requête [GET /v1/weproov]() avec un paramètre **proov_code** ou **custom_ref** les positions sont visibles.
 
-### Via L'application
+### Via l'Application
 
-Pour vous l'expliquer nous allons utiliser un template défini comme ceci:
+Pour vous l'expliquer, nous allons utiliser un template défini comme ceci:
 
 - Propriétaire 
 	- infos:
@@ -35,7 +35,7 @@ Pour vous l'expliquer nous allons utiliser un template défini comme ceci:
 		- e-mail
 		- numéro de téléphone
 	
-- locataire 
+- Locataire 
 	- infos:
 		- nom
 		- prénom 
@@ -56,12 +56,12 @@ Pour vous l'expliquer nous allons utiliser un template défini comme ceci:
 		- Roue de secours
 		
 
-lorsque vous ouvrez ce Template, vous arrivez sur un premier onglet, celui-ci correspond aux infos du propriétaire **position: {parts: 0}**.
+Lorsque vous ouvrez ce Template, vous arrivez sur un premier onglet, celui-ci correspond aux infos du propriétaire **position: {parts: 0}**.
 
-la Première info, le *nom*, correspond à  **position: {parts: 0, infos: 0}**.
-la second info le *prenom* correspond a  **position: {parts: 0, infos: 1}** ainsi de suite.
+La première info, le *nom*, correspond à  **position: {parts: 0, infos: 0}**.
+La seconde info, le *prenom*, correspond à  **position: {parts: 0, infos: 1}**, ainsi de suite.
 
-donc si nous reprenons notre template nous obtenons ceci:
+Donc, si nous reprenons notre template, nous obtenons ceci :
 
 - Propriétaire -> **position: {parts: 0}**
 	- infos:
@@ -70,12 +70,12 @@ donc si nous reprenons notre template nous obtenons ceci:
 		- e-mail -> **position: {parts: 0, infos: 2}**
 		- numéro de téléphone -> **position: {parts: 0, infos: 3}**
 
-Changeons d'onglet. vous arrivez sur la partie locataire, celle-ci étant la deuxième partie, elle correspond à **position: {parts: 1}**.
+Changeons d'onglet. Vous arrivez sur la partie Locataire, celle-ci étant la deuxième partie, elle correspond à **position: {parts: 1}**.
 Le schéma sera le même mais cette partie a une *checklists*. Pour atteindre une *checklists* il suffit de remplacer la clé *infos* par *checklists* et repartir de 0.
 
-Donc si nous reprenons notre template nous obtenons ceci:
+Donc, si nous reprenons notre template, nous obtenons ceci :
 
-- locataire -> **position: {parts: 1}**
+- Locataire -> **position: {parts: 1}**
 	- infos:
 		- nom -> **position: {parts: 1, infos: 0}**
 		- prénom -> **position: {parts: 1, infos: 1}**
@@ -86,11 +86,11 @@ Donc si nous reprenons notre template nous obtenons ceci:
 		- carte d'identité  présentée **position: {parts: 1, checklists: 0}**
 		- à plus de 18 ans -> **position: {parts: 1, checklists: 0}**
 
-pour finir il reste la partie Véhicule donc changeons encore une fois d'onglet. Nous pouvons distinguer le bien par son logo dans la barre de navigation. Cet onglet correspond à **position: {items: 0}**.
+Pour finir, il reste la partie Véhicule, donc changeons encore une fois d'onglet. Nous pouvons distinguer le bien par son logo dans la barre de navigation. Cet onglet correspond à **position: {items: 0}**.
 
-de la même facon nous pouvons nous balader dans les différents champs, ce qui nous donne: 
+De la même façon, nous pouvons nous balader dans les différents champs, ce qui nous donne : 
 
-- Vehicule -> **position: {items: 0}**
+- Véhicule -> **position: {items: 0}**
 	- infos
 		- Immatriculation -> **position: {items: 0, infos: 0}**
 		- Kilométrage -> **position: {items: 0, infos: 1}**
@@ -103,7 +103,7 @@ de la même facon nous pouvons nous balader dans les différents champs, ce qui 
 
 Route pour push des informations dans un WeProov :
 
-Le body dois être composé d'un **Array** contenant de structure définie plus bas.
+Le body doit être composé d'un **Array** contenant les structures définies plus bas.
 
 Exemple:
 
@@ -181,7 +181,7 @@ Si un WeProov n'est pas éditable :
 ```
 
 
-Si une structure ne contient pas la position de l'*infos* ou du *checklists* :  
+Si une structure ne contient pas la position de l'*infos* ou de la *checklists* :  
 
 ```
 {

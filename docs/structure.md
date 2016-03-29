@@ -28,7 +28,7 @@ url -> dropoff_url // pour les champs support/process
 ```
 
 
-## Type position
+## Type Position
 
 Le type position permet de naviguer facilement dans la structure :
 ```
@@ -66,7 +66,7 @@ Les champs infos définissent la première section visible dans l'application :
 }
 ```
 
-## type support
+## type Support
 
 ```
 {
@@ -90,7 +90,7 @@ Les champs infos définissent la première section visible dans l'application :
 }
 ```
 
-## type process
+## type Process
 ```
 {
   "name": string,

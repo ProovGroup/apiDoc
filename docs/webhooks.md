@@ -1,16 +1,16 @@
 ## Webhooks
 
-les webhooks sont gérées directement sur la platforme dans **compte** -> **gérer les webhooks**
+Les webhooks sont gérées directement sur la plateforme dans **compte** -> **gérer les webhooks**
 
-Toutes les webhooks font une requête *post* avec un *body*  contenant une [Structure WeProov]()
+Toutes les webhooks font une requête *post* avec un *body* contenant une [Structure WeProov]()
 
 Les réponses doivent être formatées en json.
-elles peuvent contenir :
+Elles peuvent contenir :
 
-- un **custom_ref** *string* -> Update la référence du rapport si elle est présente.
+- un **custom_ref** *string* -> Update la référence du rapport, si elle est présente.
 - un **auto_restart** *boolean*
 
-Attention, les webhooks sont appelées dans n'importe quel ordre. Seul la dernière valeur renvoyée sera prise en compte.
+Attention, les webhooks sont appelées dans n'importe quel ordre. Seule la dernière valeur renvoyée sera prise en compte.
 
 ### Type d'event 
 

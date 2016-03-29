@@ -2,19 +2,19 @@
 
 ### Route
 [GET /v1/weproov](#get-v1weproov)  
-[GET /v1/weproov/pending]()  // en cours de redaction  
-[GET /v1/weproov/dropoff]()  // en cours de redaction  
-[GET /v1/weproov/history]()  // en cours de redaction  
+[GET /v1/weproov/pending]()  // en cours de rédaction  
+[GET /v1/weproov/dropoff]()  // en cours de rédaction  
+[GET /v1/weproov/history]()  // en cours de rédaction  
 
 ### Généralités
 
-Toute les routes prennent un paramètre *lang* qui permet de traduire les champs title/description.
+Toutes les routes prennent un paramètre *lang* qui permet de traduire les champs title/description.
 
-Un champs *custom_ref* permet d'intérroger avec votre propre *id*.
+Un champs *custom_ref* permet d'interroger avec votre propre *id*.
 
 ### GET /v1/weproov
 
-Ce paramètre vous permet de récuperer tout l'historique de vos weproov effectués. 
+Ce paramètre vous permet de récupérer tout l'historique de vos WeProov effectués. 
 
 #### Paramètre applicable
 
@@ -106,7 +106,7 @@ body:
 }
 ```
 
-### Cas D'erreur
+### Cas d'erreur
 
 Si vous recherchez par **ProovCode** et qu'il n'est pas trouvé : 
 

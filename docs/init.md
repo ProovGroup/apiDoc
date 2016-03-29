@@ -5,7 +5,7 @@
 
 ## GET /v1/weproov/template
 
-permet de récupérer la liste de tout les templates
+permet de récupérer la liste de tous les templates
 
 ### Paramètre applicable
 
@@ -32,7 +32,7 @@ body:
 
 ## GET /v1/weproov/:template_id
 
-Permet de créer un nouveaux rapport à partir d'un template préalablement établi.
+Permet de créer un nouveau rapport à partir d'un template préalablement établi.
 
 Si vous désirez **initialiser** et **update** les informations vous pouvez utiliser une requête **POST** avec un body qui doit être le même que lors d'un update.
 
@@ -44,7 +44,7 @@ lang: permet de choisir la lang de retour du WeProov
 
 ### Retour
 
-lor d'un success un code 200 sera retourné ainsi qu'une structure WeProov.  
+lors d'un succès, un code 200 sera retourné ainsi qu'une structure WeProov.  
 
 ### Exemple
 Si tout s'est bien passé en mettant un custom_ref : 

@@ -10,17 +10,17 @@
 [Géoloc](#type-géoloc)  
 [WeProov](#type-weproov)  
 
-### généralités
+### Généralités
 
-Toute les clés sont écrites en *snake case* les mots sont separés par un _ 
+Toutes les clés sont écrites en *snake case*, les mots sont separés par un _ 
 
-Tout les **title/description** peuvent être traduits par un paramètre **lang** dans l'url. 
+Tous les **title/description** peuvent être traduits par un paramètre **lang** dans l'url. 
 
-si une valeur n'est pas renseignée, elle ne sera pas présente dans la structure.
+Si une valeur n'est pas renseignée, elle ne sera pas présente dans la structure.
 
-toute les structures comportent une sous-structure position.
+Toutes les structures comportent une sous-structure position.
 
-si une valeur à été définie lors d'un retour, le champs sera prefixé par dropoff_ :
+Si une valeur a été définie lors d'un retour, le champs sera préfixé par dropoff_ :
 
 ```
 value -> dropoff_value // pour les champs infos/checklist
@@ -30,7 +30,7 @@ url -> dropoff_url // pour les champs support/process
 
 ## Type position
 
-le type position permet de naviguer facilement dans la structure :
+Le type position permet de naviguer facilement dans la structure :
 ```
 {
 	"parts": int,
@@ -40,7 +40,7 @@ le type position permet de naviguer facilement dans la structure :
 
 ## Type Info
 
-Le champs infos définissent la première section visible dans l'application :
+Les champs infos définissent la première section visible dans l'application :
 
 #### Définition:
 

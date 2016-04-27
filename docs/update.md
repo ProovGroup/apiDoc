@@ -58,33 +58,33 @@ Pour vous l'expliquer, nous allons utiliser un template défini comme ceci:
 
 Lorsque vous ouvrez ce Template, vous arrivez sur un premier onglet, celui-ci correspond aux infos du propriétaire **position: {parts: 0}**.
 
-La première info, le *nom*, correspond à  **position: {parts: 0, infos: 0}**.
-La seconde info, le *prenom*, correspond à  **position: {parts: 0, infos: 1}**, ainsi de suite.
+La première info, le *nom*, correspond à  **position: {parts: 0, infos: "name"}**.
+La seconde info, le *prenom*, correspond à  **position: {parts: 0, infos: "first_name"}**, ainsi de suite.
 
 Donc, si nous reprenons notre template, nous obtenons ceci :
 
 - Propriétaire -> **position: {parts: 0}**
 	- infos:
-		- nom -> **position: {parts: 0, infos: 0}**
-		- prénom -> **position: {parts: 0, infos: 1}**
-		- e-mail -> **position: {parts: 0, infos: 2}**
-		- numéro de téléphone -> **position: {parts: 0, infos: 3}**
+		- nom -> **position: {parts: 0, infos: "name"}**
+		- prénom -> **position: {parts: 0, infos: "first_name"}**
+		- e-mail -> **position: {parts: 0, infos: "email"}**
+		- numéro de téléphone -> **position: {parts: 0, infos: "phone_number"}**
 
 Changeons d'onglet. Vous arrivez sur la partie Locataire, celle-ci étant la deuxième partie, elle correspond à **position: {parts: 1}**.
-Le schéma sera le même mais cette partie a une *checklists*. Pour atteindre une *checklists* il suffit de remplacer la clé *infos* par *checklists* et repartir de 0.
+Le schéma sera le même mais cette partie a une *checklists*. Pour atteindre une *checklists* il suffit de remplacer la clé *infos* par *checklists*.
 
 Donc, si nous reprenons notre template, nous obtenons ceci :
 
 - Locataire -> **position: {parts: 1}**
 	- infos:
-		- nom -> **position: {parts: 1, infos: 0}**
-		- prénom -> **position: {parts: 1, infos: 1}**
-		- e-mail -> **position: {parts: 1, infos: 2}**
-		- numéro de téléphone -> **position: {parts: 1, infos: 3}**
+		- nom -> **position: {parts: 1, infos: "name"}**
+		- prénom -> **position: {parts: 1, infos: "first_name"}**
+		- e-mail -> **position: {parts: 1, infos: "email"}**
+		- numéro de téléphone -> **position: {parts: 1, infos: "phone_number"}**
 
 	- checklists:
-		- carte d'identité  présentée **position: {parts: 1, checklists: 0}**
-		- à plus de 18 ans -> **position: {parts: 1, checklists: 0}**
+		- carte d'identité  présentée **position: {parts: 1, checklists: "valid_id"}**
+		- à plus de 18 ans -> **position: {parts: 1, checklists: "older_than_18"}**
 
 Pour finir, il reste la partie Véhicule, donc changeons encore une fois d'onglet. Nous pouvons distinguer le bien par son logo dans la barre de navigation. Cet onglet correspond à **position: {items: 0}**.
 
@@ -92,12 +92,12 @@ De la même façon, nous pouvons nous balader dans les différents champs, ce qu
 
 - Véhicule -> **position: {items: 0}**
 	- infos
-		- Immatriculation -> **position: {items: 0, infos: 0}**
-		- Kilométrage -> **position: {items: 0, infos: 1}**
+		- Immatriculation -> **position: {items: 0, infos: "register"}**
+		- Kilométrage -> **position: {items: 0, infos: "kilometers"}**
 	
 	- checklists
-		- Nombre de gilets -> **position: {items: 0, checklists: 0}**
-		- Roue de secours -> **position: {items: 0, checklists: 1}**
+		- Nombre de gilets -> **position: {items: 0, checklists: "security_vest"}**
+		- Roue de secours -> **position: {items: 0, checklists: "spare_wheel"}**
 
 ### POST /v1/weproov
 
@@ -111,35 +111,35 @@ Exemple:
 [
 	{
 		value: "Craig", 
-		position: {parts: 0, infos: 0}
+		position: {parts: 0, infos: "name"}
 	},
 	{
 		value: "Daniel", 
-		position: {parts: 0, infos: 1}
+		position: {parts: 0, infos: "first_name"}
 	},
 	{
 		value: "0606060606", 
-		position: {parts: 0, infos: 2}
+		position: {parts: 0, infos: "phone_number"}
 	},
 	{
 		value: "daniel.craig@yopmail.com", 
-		position: {parts: 0, infos: 3}
+		position: {parts: 0, infos: "email"}
 	},
 	{
 		value: "AA-BBB-CCC", 
-		position: {items: 0, infos: 0}
+		position: {items: 0, infos: "register"}
 	},
 	{
 		value: "552345", 
-		position: {items: 0, infos: 1}
+		position: {items: 0, infos: "kilometers"}
 	},
 	{
 		value: 3, 
-		position: {items: 0, checklists: 0}
+		position: {items: 0, checklists: "security_vest"}
 	},
 	{
 		value: true, 
-		position: {items: 0, checklists: 1}
+		position: {items: 0, checklists: "spare_wheel"}
 	}
 ]
 ```

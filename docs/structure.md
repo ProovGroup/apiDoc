@@ -34,7 +34,7 @@ Le type position permet de naviguer facilement dans la structure :
 ```
 {
 	"parts": int,
-	"infos": int
+	"infos": string // exemple: "name" ...
 }
 ```
 

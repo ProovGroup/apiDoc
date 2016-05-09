@@ -70,7 +70,7 @@ Donc, si nous reprenons notre template, nous obtenons ceci :
 		- e-mail -> **position: {parts: 0, infos: "email"}**
 		- numéro de téléphone -> **position: {parts: 0, infos: "phone_number"}**
 
-Changeons d'onglet. Vous arrivez sur la partie Locataire, celle-ci étant la deuxième partie, elle correspond à **position: {parts: 1}**.
+Changeons d'onglet. Vous arrivez sur la partie Locataire, celle-ci étant la deuxième partie prenante, elle correspond à **position: {parts: 1}**.
 Le schéma sera le même mais cette partie a une *checklists*. Pour atteindre une *checklists* il suffit de remplacer la clé *infos* par *checklists*.
 
 Donc, si nous reprenons notre template, nous obtenons ceci :

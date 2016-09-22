@@ -2,6 +2,7 @@
 
 [GET /v1/weproov/template]()  
 [GET /v1/weproov/init/:template_id]()
+[POST /v1/weproov/init/:template_id]()
 
 ## GET /v1/weproov/template
 

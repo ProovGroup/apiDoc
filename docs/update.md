@@ -1,4 +1,4 @@
-[POST /v1/weproov](#post-v1weproov)
+[PUT /v1/weproov](#put-v1weproov)
 
 ## update
 
@@ -99,7 +99,7 @@ De la même façon, nous pouvons nous balader dans les différents champs, ce qu
 		- Nombre de gilets -> **position: {items: 0, checklists: "security_vest"}**
 		- Roue de secours -> **position: {items: 0, checklists: "spare_wheel"}**
 
-### POST /v1/weproov
+### put /v1/weproov
 
 Route pour push des informations dans un WeProov :
 

@@ -1,9 +1,9 @@
-[Authentification](./auth.md)  
-[Les structures retournées](./structure.md)  
-[Initialiser un WeProov](./init.md)  
-[Récuperer un WeProov](./get.md)  
-[Mise à jour d'un WeProov](./update.md)  
-[Les webhooks](./webhooks.md)  
+[Authentication](./auth.md)  
+[Returned structures](./structure.md)  
+[Initialize a WeProov](./init.md)  
+[Get a WeProov](./get.md)  
+[Update a WeProov](./update.md)  
+[Webhooks](./webhooks.md)  
 
-Exemple :
+Example :
 [CURL](./exemples/curl/curl.md)

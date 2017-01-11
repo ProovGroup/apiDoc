@@ -1,4 +1,4 @@
-## Généralités
+## Informations
 The **access_token** is only available for 24h. When you passed this deadline, you need to re-examine the road [POST v1/oauth]().
 
 The **access_token** must be placed in the header, in the Authorization field. 

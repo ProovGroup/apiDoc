@@ -1,2 +1,2 @@
-[English version](./english)
+[English version](./english)  
 [French version](./french)

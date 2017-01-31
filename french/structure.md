@@ -96,8 +96,19 @@ Les champs infos définissent la première section visible dans l'application :
   "name": string,
   "title": string,
   "url": string,
+  "infos": [Annotation]
   "dropoff_url": string,
+  "dropoff_infos": [Annotation]
   "position": struct_position
+}
+```
+
+## Type Annotation
+```
+{
+  "index": Int,
+  "choice": String, // "Rayure" | "Enfoncement / Bosselage" | "Cassure" | "Eclat / Bris" | "Piece manquante" | "Autre"
+  "description": String
 }
 ```
 

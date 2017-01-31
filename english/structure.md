@@ -96,8 +96,19 @@ The info filds define the first visible section in the app :
   "name": string,
   "title": string,
   "url": string,
+  "infos": [Annotation]
   "dropoff_url": string,
+  "dropoff_infos": [Annotation]
   "position": struct_position
+}
+```
+
+## Type Annotation
+```
+{
+  "index": Int,
+  "choice": String, // "Scratch" | "Denting / Embossing" | "Breaking" | "Shard / Breakage" | "Missing piece" | "Another"
+  "description": String
 }
 ```
 

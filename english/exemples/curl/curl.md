@@ -8,7 +8,7 @@ curl -H "Content-Type: application/json" \
 		"secret": "<SECRET>" 
 	}' \
 	-X POST \
-	http://api.weproov.com/v1/oauth
+	https://api.weproov.com/v1/oauth
 ```
 
 # Réponse
@@ -26,7 +26,7 @@ curl -H "Content-Type: application/json" \
 curl -H "Content-Type: application/json" \
 	-H "Authorization: Bearer <ACCESS_TOKEN>" \
 	-X GET \
-	http://api.weproov.com/v1/weproov/template
+	https://api.weproov.com/v1/weproov/template
 ```
 
 # Réponse 
@@ -50,7 +50,7 @@ curl -H "Content-Type: application/json" \
 curl -H "Content-Type: application/json" \
 	-H "Authorization: Bearer <ACCESS_TOKEN>" \
 	-X GET \
-	http://api.weproov.com/v1/weproov/init/:template_id
+	https://api.weproov.com/v1/weproov/init/:template_id
 ```
 
 # Réponse 
@@ -257,7 +257,7 @@ curl -H "Content-Type: application/json" \
 		}
 	]' \
 	-X POST \
-	http://api.weproov.com/v1/weproov/init/:template_id
+	https://api.weproov.com/v1/weproov/init/:template_id
 ```
 
 # Réponse 
@@ -460,7 +460,7 @@ curl -H "Content-Type: application/json" \
 		}
 	]' \
 	-X PUT \
-	http://api.weproov.com/v1/weproov?proov_code="8RWQ33"
+	https://api.weproov.com/v1/weproov?proov_code="8RWQ33"
 ```
 
 # Réponse 
@@ -660,7 +660,7 @@ Je rajoute le paramètre lang=fr pour le récupérer tous les titres en françai
 curl -H "Content-Type: application/json" \
 	-H "Authorization: Bearer <ACCESS_TOKEN>" \
 	-X GET \
-	http://api.weproov.com/v1/weproov?proov_code="8RWQ33"&lang=fr
+	https://api.weproov.com/v1/weproov?proov_code="8RWQ33"&lang=fr
 ```
 
 # Réponse 

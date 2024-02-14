@@ -1,0 +1,86 @@
+trigger:
+- develop
+
+resources:
+  repositories:
+    - repository: templates
+      type: github
+      name: ProovGroup/ci-templates-azure
+      endpoint: ProovGroup
+
+# Define your variables here
+variables:
+- group: PAT
+- name: profile
+  value: AWS - TEST
+- name: lambda_name
+  value: worker_test_lambda
+- name: role_name
+  value: $(lambda_name)_role
+- name: region
+  value: eu-west-3
+- name: env
+  value: test
+- name: language
+  value: go
+- name: go_arch
+  value: arm64
+- name: myCondition
+  value: true
+- name: bucket
+  value: weproov-test-bootstrap
+- name: runtime
+  value: "provided.al2023"
+- name: role_arn
+  value: #ask to DEVOPS
+# IMAGE 
+pool: 
+  vmImage: ubuntu-latest
+
+## START
+stages:
+  - stage: GO
+    displayName: 'go dependencies and build'
+    jobs:
+    - job: dependencies
+      steps:
+      - template: template-go.yml@templates
+        parameters:
+          pool: 'Azure Pipelines'
+          vmImage: 'ubuntu-latest'
+  - stage: AWS
+    displayName: 'aws cli script'
+    jobs:
+    - job: aws_script
+      steps:
+      - task: DownloadPipelineArtifact@2
+        displayName: retrieve artifact
+        inputs:
+          artifact: '$(lambda_name).zip'        # Specify the artifact name you want to download
+          path: '$(System.DefaultWorkingDirectory)/'  # Specify the path where you want to download the artifact
+      - task: AWSShellScript@1
+        displayName: cp build to s3
+        inputs:
+          awsCredentials: $(profile)
+          regionName: $(region)
+          scriptType: inline
+          disableAutoCwd: true
+          failOnStandardError: true
+          workingDirectory: $(System.DefaultWorkingDirectory)
+          inlineScript: |
+              aws s3 cp $(lambda_name).zip s3://$(bucket)/main.zip      
+      - task: AWSShellScript@1
+        displayName: lambda update
+        inputs:
+          awsCredentials: $(profile)
+          regionName: $(region)
+          scriptType: inline
+          disableAutoCwd: true
+          failOnStandardError: true
+          workingDirectory: $(System.DefaultWorkingDirectory)
+          inlineScript: |
+            aws lambda update-function-code \
+            --function-name $(lambda_name) \
+            --s3-bucket $(bucket) \
+            --s3-key main.zip \
+
